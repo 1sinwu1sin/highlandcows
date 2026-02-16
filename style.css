@@ -1,17 +1,49 @@
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --header-bg: #0056b3;
+    --header-text: #fff;
+    --section-bg: #fff;
+    --section-h2: #0056b3;
+    --feature-li-bg: #e9f5ff;
+    --feature-li-border: #0056b3;
+    --footer-bg: #333;
+    --footer-text: #fff;
+    --button-bg: #28a745;
+    --button-hover-bg: #218838;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1a1a1a;
+    --header-text: #fff;
+    --section-bg: #1e1e1e;
+    --section-h2: #58a6ff;
+    --feature-li-bg: #2c2c2c;
+    --feature-li-border: #58a6ff;
+    --footer-bg: #1a1a1a;
+    --footer-text: #e0e0e0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #0056b3; /* Darker blue for a professional look */
-    color: #fff;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 2rem 1rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -31,15 +63,16 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: var(--section-bg);
     padding: 2rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
 }
 
 section h2 {
-    color: #0056b3;
+    color: var(--section-h2);
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -57,10 +90,10 @@ section h2 {
 }
 
 .features li {
-    background-color: #e9f5ff;
+    background-color: var(--feature-li-bg);
     margin-bottom: 0.8rem;
     padding: 1rem;
-    border-left: 5px solid #0056b3;
+    border-left: 5px solid var(--feature-li-border);
     border-radius: 4px;
     font-size: 1.05rem;
 }
@@ -70,7 +103,7 @@ section h2 {
 }
 
 button {
-    background-color: #28a745; /* Green for call to action */
+    background-color: var(--button-bg);
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -82,14 +115,117 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: var(--button-hover-bg);
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Theme Switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: var(--section-bg);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+#consultation-form {
+    display: flex;
+    flex-direction: column;
+}
+#consultation-form label {
+    margin-top: 1rem;
+}
+#consultation-form input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#consultation-form button {
+    margin-top: 1.5rem;
 }
