@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - 권도후의 학습코칭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">권도후 학습코칭</a></div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="about.html">코치 소개</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-title-section">
+                <h1 class="page-title">문의하기</h1>
+                <p>학습에 대한 모든 고민, 함께 나누고 해결합니다.</p>
+            </section>
+            
+            <section class="contact-page-content">
+                <div class="card">
+                    <h3>상담 신청</h3>
+                    <p>아래 버튼을 눌러 바로 상담을 신청하고, 학습 변화의 첫걸음을 시작하세요.</p>
+                    <button id="consultation-btn" class="cta-button">상담 신청하기</button>
+                </div>
+                <div class="card">
+                    <h3>기타 문의</h3>
+                    <p>코칭 프로그램에 대한 추가적인 질문이나 협업 문의는 아래 이메일로 연락 주시기 바랍니다.</p>
+                    <p><strong>이메일:</strong> contact@learningcoach.com</p>
+                    <p><strong>전화:</strong> 010-1234-5678</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 권도후 학습코칭. All Rights Reserved. | <a href="privacy.html">개인정보처리방침</a></p>
+        </footer>
+    </div>
+
+    <!-- Modal HTML is needed for the button to work -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>상담 신청</h2>
+            <form id="consultation-form">
+                <label for="student-name">이름:</label>
+                <input type="text" id="student-name" name="student-name" required>
+                <label for="phone-number">전화번호:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+                <label for="school-name">학교명:</label>
+                <input type="text" id="school-name" name="school-name" required>
+                <button type="submit" id="submit-btn">확인</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

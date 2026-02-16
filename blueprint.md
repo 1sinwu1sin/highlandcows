@@ -1,30 +1,35 @@
-# Kwon Do-hoo's Learning Coaching Homepage - Revamp Blueprint
+# Kwon Do-hoo's Learning Coaching Homepage - AdSense Quality Upgrade Blueprint
 
-## Overview
+## Primary Goal
+To upgrade the website to a "high-quality page" that meets Google AdSense program policies, focusing on user trust, valuable content, and a professional user experience.
 
-A professional and persuasive homepage for "권도후의 학습코칭", benchmarked against `https://snucoach.oopy.io`. The site will tell the coach's compelling story to build credibility and trust, clearly present the coaching philosophy, and drive potential customers to apply for a consultation.
+## Core Upgrade Strategy
+1.  **Build Trust (E-A-T):** Establish Expertise, Authoritativeness, and Trustworthiness by creating essential pages (`About`, `Contact`, `Privacy Policy`) and adding social proof (testimonials).
+2.  **Provide Value:** Enhance existing content to be more detailed and original, providing unique insights into the coach's methods.
+3.  **Improve UX:** Implement a clear navigation structure and optimize technical aspects like image loading.
 
-## Coach's Core Information
-- **Identity:** Catholic University of Korea medical student (2nd year, on leave for coaching).
-- **Key Credibility:**
-    - High school rank improvement from 313th to 9th.
-    - Admitted to Catholic University Medical School via early admission (수시).
-    - Also accepted to 2 other universities via comprehensive admission (학종).
-    - 4 years of coaching experience.
+## New Site Structure
+- **`index.html`:** The main landing page.
+- **`about.html`:** A new, detailed page about the coach's story and philosophy.
+- **`contact.html`:** A new, dedicated contact page.
+- **`privacy.html`:** A new, essential privacy policy page.
+- **`style.css`:** The global stylesheet.
+- **`main.js`:** The global script file.
+- **/images/ (new folder):** To store locally hosted images.
 
-## Website Structure & Content Strategy
-The website will be a single-page narrative that guides the visitor through a logical flow.
+## Action Plan
 
-1.  **Hero Section:** Strong, trust-building headline (e.g., "313등에서 의대 합격, 그 비결을 코칭합니다").
-2.  **Problem Section:** Empathize with student struggles (e.g., "공부는 하는데 성적이 오르지 않나요?").
-3.  **Coach's Story Section:** Detail the coach's journey (rank improvement, university admissions) to build proof and credibility. Mention the "성적표" (report card) as a symbol of this journey.
-4.  **Coaching Philosophy Section:** Explain the "how" – the unique approach to learning that the coach provides, moving beyond simple tutoring.
-5.  **Program Details Section (Placeholder):** Briefly outline what the coaching includes (e.g., "1:1 맞춤 전략", "지속적인 동기부여").
-6.  **Call to Action (CTA) / Contact Section:** A clear prompt for users to apply for consultation via the existing modal.
-
-## Technical Plan
-- **`index.html`:** Complete restructure to implement the new sections.
-- **`style.css`:** A full rewrite of styles to create a clean, modern, and professional aesthetic inspired by the reference site. Will use a card-based layout for clarity and better visual hierarchy. CSS variables for theming (light/dark) will be maintained and expanded.
-- **`main.js`:** Verify that the existing modal and dark mode logic function correctly with the new HTML structure. No major new logic is expected, but selectors may need updating.
-- **`blueprint.md`:** This file.
-- **Git:** All changes will be committed and pushed upon completion.
+1.  **Create New Pages:**
+    *   **`about.html`:** Expand on the coach's background, motivations, and the "why" behind the coaching.
+    *   **`contact.html`:** Provide clear contact methods.
+    *   **`privacy.html`:** Generate a standard, comprehensive privacy policy.
+2.  **Enhance `index.html`:**
+    *   **Navigation:** Add a clear, consistent header navigation bar linking to all new pages.
+    *   **Content Expansion:** Deepen the "Philosophy" and create a full "Program Details" section.
+    *   **Testimonials:** Add a placeholder section for future social proof.
+3.  **Enhance `style.css`:**
+    *   Style the new navigation bar.
+    *   Download a relevant, license-free image, save it locally in an `/images` folder, and update the hero section background.
+    *   Ensure all new pages and sections are styled consistently with the existing design.
+4.  **Verify `main.js`:** Ensure scripts for the modal and dark mode continue to function correctly across all pages.
+5.  **Git:** Commit and push all changes.
